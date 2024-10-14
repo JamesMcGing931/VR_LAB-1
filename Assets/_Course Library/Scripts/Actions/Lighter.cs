@@ -19,7 +19,7 @@ public class Lighter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+/*    void Update()
     {
         if (Input.GetKeyDown("Fire1") && lighter.activeInHierarchy)
         {
@@ -32,7 +32,7 @@ public class Lighter : MonoBehaviour
             flames.SetActive(false);
             isOn = false;
         }
-    }
+    }*/
 
     public void FlameOn()
     {
