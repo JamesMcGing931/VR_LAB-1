@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 170008, guid: a99f98807d4853b42beb91ff3e2ba0b6, type: 3}
       propertyPath: m_Name
-      value: Tree_Oak1 Variant
+      value: BetterOak
       objectReference: {fileID: 0}
     - target: {fileID: 470008, guid: a99f98807d4853b42beb91ff3e2ba0b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -67,5 +67,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 170008, guid: a99f98807d4853b42beb91ff3e2ba0b6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2165698397354621871}
   m_SourcePrefab: {fileID: 100100000, guid: a99f98807d4853b42beb91ff3e2ba0b6, type: 3}
+--- !u!1 &8772266558127473049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 170008, guid: a99f98807d4853b42beb91ff3e2ba0b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8772266558127380865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &-2165698397354621871
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772266558127473049}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15.00854
+  m_Height: 32.49754
+  m_Direction: 1
+  m_Center: {x: -3.92138, y: 15.287572, z: 0.26672316}
