@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class BallSound : MonoBehaviour
 {
-    public AudioClip saw;    // Add your Audi Clip Here;
+    public AudioClip saw;    
 
-    // This Will Configure the  AudioSource Component; 
-    // MAke Sure You added AudioSouce to death Zone;
+
     void Start()
     {
         GetComponent<AudioSource>().playOnAwake = false;
         GetComponent<AudioSource>().clip = saw;
     }
 
-    void OnCollisionEnter()  //Plays Sound Whenever collision detected
+    void OnCollisionEnter() 
     {
         GetComponent<AudioSource>().Play();
     }

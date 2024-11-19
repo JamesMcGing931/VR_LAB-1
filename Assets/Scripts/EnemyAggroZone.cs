@@ -7,20 +7,20 @@ public class EnemyAgroZone : MonoBehaviour
     public GameObject target;
     public GameObject enemy;
     public float movementSpeed;
-    public float rotationSpeed = 5f;  // Rotation speed to control how fast the spider turns
+    public float rotationSpeed = 5f; 
 
     private Rigidbody enemyRigidBody;
     private Vector3 calculatedDirection;
     private Vector3 calculatedDistance;
     private bool targetDetected = false;
 
-    private WaypointPatternMovement waypointMovement; // Reference to the waypoint movement script
+    private WaypointPatternMovement waypointMovement; 
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRigidBody = enemy.GetComponent<Rigidbody>();
-        waypointMovement = enemy.GetComponent<WaypointPatternMovement>(); // Get the waypoint script component
+        waypointMovement = enemy.GetComponent<WaypointPatternMovement>(); 
     }
 
     private void FixedUpdate()
@@ -33,13 +33,13 @@ public class EnemyAgroZone : MonoBehaviour
                 waypointMovement.enabled = false;
             }
 
-            // Calculate the direction to the player
+            // Calculate direction to the player
             calculatedDirection = (target.transform.position - enemy.transform.position).normalized;
 
-            // Calculate the distance from the player
+            // Calculate distance
             calculatedDistance = target.transform.position - enemy.transform.position;
 
-            // Rotate the spider to face the player
+            // Rotate spider to face the player
             if (calculatedDirection != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(calculatedDirection);
@@ -51,7 +51,7 @@ public class EnemyAgroZone : MonoBehaviour
             {
                 enemyRigidBody.velocity = new Vector3(
                     calculatedDirection.x * movementSpeed,
-                    enemyRigidBody.velocity.y, // Keep Y velocity for gravity
+                    enemyRigidBody.velocity.y,
                     calculatedDirection.z * movementSpeed
                 );
             }
@@ -76,7 +76,6 @@ public class EnemyAgroZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Detect player by object reference
         if (other.gameObject == target)
         {
             targetDetected = true;
